@@ -1,7 +1,4 @@
-#from sqlite3 import Cursor
-import psycopg2
-import psycopg2.extras
-#from psycopg2 import cursor
+from sqlite3 import Cursor
 from flask import Flask, Blueprint, request, flash, url_for, redirect, render_template
 from requests import post
 from sqlalchemy import desc
@@ -15,7 +12,6 @@ from model import controller, db, Users, meetups
 app=controller
 # app = Flask(__name__)
 # #app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///meetup.sqlite3'
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:1234@localhost:5050/test'
 # app.config['SECRET_KEY'] = "random string"
 
 # db = SQLAlchemy(app)
