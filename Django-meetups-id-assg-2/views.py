@@ -10,9 +10,9 @@ def index(request):
     })
 
 
-def meetup_details(request, pk):
+def meetup_details(request, id):
     try:
-        selected_meetups = Meetup.objects.get(id=pk)
+        selected_meetups = Meetup.objects.get(id=id)
 
         return render(request, 'meetups/meetup-details.html', {
             'meetup_found': True,
